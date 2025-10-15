@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Navigator - My 360 Photo Tour</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css" />
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -12,8 +13,12 @@
 <body>
     <header>
         <nav>
-            <a href="index.html" class="brand">360° Tour</a>
-            <ul>
+            <a href="index.html" class="brand"><img src="images/enkku.png" alt="360° Tour logo"></a>
+            <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="hamburger" aria-hidden="true"></span>
+            </button>
+            <ul id="main-nav">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="navigator.html" class="active">Navigator</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -33,6 +38,7 @@
     
     <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
     <script src="js/tour.js"></script>
+    <script src="js/nav.js"></script>
 </body>
 
 </html>

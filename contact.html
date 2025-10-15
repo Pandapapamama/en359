@@ -5,14 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - My 360 Photo Tour</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header>
         <nav>
-            <a href="index.html" class="brand">360° Tour</a>
-            <ul>
+            <a href="index.html" class="brand"><img src="images/enkku.png" alt="360° Tour logo"></a>
+            <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="hamburger" aria-hidden="true"></span>
+            </button>
+            <ul id="main-nav">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="navigator.html">Navigator</a></li>
                 <li><a href="contact.html" class="active">Contact</a></li>
@@ -25,16 +30,18 @@
             <h1>ติดต่อเรา 📬</h1>
             <p>หากมีข้อสงสัยหรือต้องการสอบถามข้อมูลเพิ่มเติม สามารถติดต่อได้ที่:</p>
             <ul>
-                <li><strong>Email:</strong> contact@example.com</li>
-                <li><strong>โทรศัพท์:</strong> 012-345-6789</li>
-                <li><strong>ที่อยู่:</strong> 123 ถนนตัวอย่าง, อำเภอเมือง, จังหวัดขอนแก่น 40000</li>
+                <li><strong>Email:</strong> contact@kku.ac.th</li>
+                <li><strong>โทรศัพท์:</strong> 043-009-700</li>
+                <li><strong>ที่อยู่:</strong> 123 ถนนมิตรภาพ, อำเภอเมือง, จังหวัดขอนแก่น 40002</li>
             </ul>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2025 My 360 Photo Tour</p>
+        <p>&copy; 2025 Faculty of Engineering, Khon Kaen University</p>
     </footer>
+
+    <script src="js/nav.js"></script>
 </body>
 
 </html>

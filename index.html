@@ -5,14 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - My 360 Photo Tour</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header>
         <nav>
-            <a href="index.html" class="brand">360° Tour</a>
-            <ul>
+            <a href="index.html" class="brand"><img src="images/enkku.png" alt="360° Tour logo"></a>
+            <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="hamburger" aria-hidden="true"></span>
+            </button>
+            <ul id="main-nav">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="navigator.html">Navigator</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -23,15 +28,34 @@
     <main class="content-page">
         <div class="container">
             <h1>ยินดีต้อนรับสู่ Virtual Tour 🚀</h1>
-            <p>สำรวจพื้นที่ต่างๆ ของเราได้ในรูปแบบ 360 องศา</p>
+            <p>สำรวจพื้นที่ต่างๆ ของคณะวิศวกรรมศาสตร์ มหาวิทยาลัยขอนแก่น ได้ในรูปแบบ 360 องศา</p>
             <p>คลิกที่เมนู 'Navigator' เพื่อเริ่มต้นการทัวร์ หรือเลือกสถานที่ที่คุณสนใจได้ทันที</p>
             <a href="navigator.html" class="btn">เริ่มต้นทัวร์</a>
         </div>
-    </main>
+
+        <div id="info" class="stats-background">
+            <div class="container stats-container">
+                <div class="stat-item">
+                    <h3 class="stat-number" data-target="37">0</h3>
+                    <p class="stat-label">ที่จอดรถ (คัน)</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="stat-number" data-target="45">0</h3>
+                    <p class="stat-label">จำนวนโต๊ะทั้งหมด</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="stat-number" data-target="154">0</h3>
+                    <p class="stat-label">จำนวนเก้าอี้ทั้งหมด</p>
+                </div>
+            </div>
+        </div>
+        </main>
 
     <footer>
         <p>&copy; 2025 My 360 Photo Tour</p>
     </footer>
-</body>
+    
+    <script src="js/nav.js"></script>
+    <script src="js/counter.js"></script> </body>
 
 </html>
