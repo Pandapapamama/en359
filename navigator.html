@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Navigator - My 360 Photo Tour</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="brand">360° Tour</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="navigator.html" class="active">Navigator</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="tour-container">
+        <div id="scene-selector">
+            <label for="scenes">เลือกจุดที่ต้องการไป:</label>
+            <select id="scene-list"></select>
+            <button id="goto-scene-btn">Go!</button>
+        </div>
+        
+        <div id="panorama"></div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <script src="js/tour.js"></script>
+</body>
+
+</html>

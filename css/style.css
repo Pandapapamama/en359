@@ -1,0 +1,157 @@
+/* --- General Styles --- */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* --- Header and Navigation --- */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .brand {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #3498db;
+}
+
+/* --- Content Pages (Home, Contact) --- */
+.content-page {
+    padding-top: 80px; /* Space for fixed header */
+}
+
+.content-page h1 {
+    color: #2c3e50;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+
+/* --- Tour Page (Navigator) --- */
+.tour-container {
+    padding-top: 60px; /* Space for header */
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+#panorama {
+    width: 100%;
+    flex-grow: 1; /* Take remaining height */
+    height: calc(100vh - 120px); /* Adjust height considering header and selector */
+}
+
+#scene-selector {
+    padding: 15px;
+    background-color: #ecf0f1;
+    text-align: center;
+    border-bottom: 2px solid #bdc3c7;
+}
+
+#scene-selector label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#scene-selector select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#scene-selector button {
+    padding: 8px 15px;
+    margin-left: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#scene-selector button:hover {
+    background-color: #2980b9;
+}
+
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #34495e;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
