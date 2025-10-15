@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>My 360 Photo Tour</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css" />
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #panorama {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="panorama"></div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+
+    <script>
+        // --- ส่วนที่ 1: สร้าง Viewer พร้อม Config ของ Virtual Tour ---
+        var viewer = pannellum.viewer('panorama', {
+            "default": {
+                "firstScene": "start", // <-- เปลี่ยนให้ซีนแรกเป็น "start"
+                "autoLoad": true,
+                "autoRotate": 4,
+            },
+
+            "scenes": {
+                // --- ซีนที่ 1: จุดเริ่มต้น (ซีนใหม่) ---
+                "start": {
+                    "title": "จุดเริ่มต้น",
+                    "panorama": "images/start.jpg", // 
+                    "hotSpots": [
+                        {
+                            "pitch": -3.567798,    // 
+                            "yaw": 114.1235,   // 
+                            "type": "scene",
+                            "text": "เข้าไปในอาคาร",
+                            "sceneId": "floor1left" // 
+
+                        },
+                        {
+                            "pitch": -4.549234,    //
+                            "yaw": -130.4149,  //
+                            "type": "scene",
+                            "text": "เข้าไปในอาคาร",
+                            "sceneId": "floor1right"
+                        },
+                        {
+                            "pitch": 16.282003,
+                            "yaw": -59.880397,
+                            "type": "scene",
+                            "text": "เข้าไปในอาคาร",
+                            "sceneId": "inner2floor"
+                        },
+                        {
+                            "pitch": -4.52775263,
+                            "yaw": -59.993339,
+                            "type": "scene",
+                            "text": "นอกอาคาร",
+                            "sceneId": "rightside"
+                        },
+                    ]
+                },
+                "floor1right": {
+                    "panorama": "images/floor1right.JPG",
+                    "hotSpots": [
+                        {
+
+                            "pitch": -10.90533270,
+                            "yaw": -37.370744,// 
+                            "type": "scene",
+                            "text": "ที่นั่งพัก",
+                            "sceneId": "chair"
+
+                        },
+                        {
+
+                            "pitch": -7.795392,
+                            "yaw": 28.80268,// 
+                            "type": "scene",
+                            "text": "ทางออก",
+                            "sceneId": "start"
+                        },
+                        {
+
+                            "pitch": -7.985412160,
+                            "yaw": 153.701527,// 
+                            "type": "scene",
+                            "text": "ทางออก",
+                            "sceneId": "start"
+                        },
+                        {
+
+                            "pitch": 25.33666838,
+                            "yaw": -71.7934,// 
+                            "type": "scene",
+                            "text": "ชั้น2",
+                            "sceneId": "infloor2"  //
+                        },
+                        {
+
+                            "pitch": -15.220258487,
+                            "yaw": 166.94205971,// 
+                            "type": "scene",
+                            "text": "ทางหลัก",
+                            "sceneId": "floor1left"
+                        },
+                        {
+
+                            "pitch": -5.109445,
+                            "yaw": -141.73978,
+                            "type": "scene",
+                            "text": "ทางออก",
+                            "sceneId": "end"
+                        },
+                        {
+
+                            "pitch": -3.1611174010,
+                            "yaw": -81.973443733,// 
+                            "type": "scene",
+                            "text": "ทางหลัก",
+                            "sceneId": "end"
+                        },
+
+                    ]
+                },
+
+                "floor1left": {
+                    "panorama": "images/floor1left.JPG",
+                    "hotSpots": [
+                        {
+                            "pitch": -8.9634438,    //
+                            "yaw": -166.6892,   // 
+                            "type": "scene",
+                            "text": "ทางหลัก",
+                            "sceneId": "floor1right"
+                        },
+                        {
+                            "pitch": 6.30803,    //
+                            "yaw": 176.6740,   // 
+                            "type": "scene",
+                            "text": "ชั้น2",
+                            "sceneId": "infloor2"
+                        },
+                        {
+
+                            "pitch": -2.2588320,
+                            "yaw": 123.7386,
+                            "type": "scene",
+                            "text": "ข้างนอก",
+                            "sceneId": "end"
+                        },
+                        {
+                            "pitch": -22.7651959,
+                            "yaw": -109.922236,
+                            "type": "scene",
+                            "text": "ทางอออก",
+                            "sceneId": "start"
+                        },
+                    ]
+                },
+
+                "midfloor": {
+                    "panorama": "images/midfloor.JPG",
+                    "hotSpots": [
+                        {
+                            "pitch": -10.7023329,    // 
+                            "yaw": 135.979925,   // 
+                            "type": "scene",
+                            "text": "ทางออก",
+                            "sceneId": "start" //   
+                        },
+                        {
+                            "pitch": -7.054448035399753,    //  
+                            "yaw": 53.82077414,   // 
+                            "type": "scene",
+                            "text": "ทางออก",
+                            "sceneId": "start" // 
+                        },
+                        {
+                            "pitch": -10.90533270,
+                            "yaw": -37.370744,// 
+                            "type": "scene",
+                            "text": "ที่นั่งพัก",
+                            "sceneId": "chair" // 
+                        },
+
+                    ]
+                },
+
+                "floor2": {
+                    "title": "ภายในอาคาร",
+                    "panorama": "images/floor2.JPG",
+                    "hotSpots": [
+                        {
+                            "pitch": -4.80622,
+                            "yaw": 155.92666,
+                            "type": "scene",
+                            "text": "เดินออกไปข้างนอก",
+                            "sceneId": "infloor2"
+                        },
+                        {
+                            "pitch": -25.610714229,
+                            "yaw": -156.35158218,
+                            "type": "scene",
+                            "text": "หลังตึก",
+                            "sceneId": "end"
+                        },
+                    ]
+                },
+
+                "chair": {
+                    "title": "ที่นั่งพัก",
+                    "panorama": "images/rest.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -23.6822775,
+                            "yaw": 25.027265,
+                            "type": "scene",
+                            "text": "ทางหลัก",
+                            "sceneId": "floor1right"
+                        },
+                        {
+                            "pitch": -7.84891067,
+                            "yaw": -148.774210,
+                            "type": "scene",
+                            "text": "ทางออก",
+                            "sceneId": "rightoutside"
+                        },
+                        {
+                            "pitch": -4.90230614,
+                            "yaw": -12.82283723,
+                            "type": "scene",
+                            "text": "ทางออก",
+                            "sceneId": "start"
+                        },
+                        {
+                            "pitch": -5.971535468,
+                            "yaw": 98.52385387,
+                            "type": "scene",
+                            "text": "ทางออก",
+                            "sceneId": "end"
+                        },
+                        {
+                            "pitch": -7.4804664526,
+                            "yaw": 76.94447509,
+                            "type": "scene",
+                            "text": "ทางขึ้นชั้น2",
+                            "sceneId": "infloor2"
+                        },
+                    ]
+                },
+
+                // --- ซีนที่ 3: ด้านนอก ---
+                "infloor2": {
+                    "title": "ด้านในอาคาร",
+                    "panorama": "images/infloor2.JPG",
+                    "hotSpots": [
+                        {
+                            "pitch": -20.08811,
+                            "yaw": 99.6022,
+                            "type": "scene",
+                            "text": "ออกไปข้างนอก",
+                            "sceneId": "floor2"
+                        },
+                        {
+                            "pitch": -17.16442157,
+                            "yaw": -20.10252209027,
+                            "type": "scene",
+                            "text": "ชั้น1",
+                            "sceneId": "floor1left"
+                        },
+                        {
+                            "pitch": -3.824570240,
+                            "yaw": -82.8490088,
+                            "type": "scene",
+                            "text": "ข้างนอก",
+                            "sceneId": "inner2floor"
+                        }
+                    ]
+                },
+                "end": {
+                    "title": "ที่นั่งพัก",
+                    "panorama": "images/end.JPG",
+                    "hotSpots": [
+                        {
+                            "pitch": -7.56010483, //
+                            "yaw": 58.89852295,
+                            "type": "scene",
+                            "text": "ทางเข้าอาคาร",
+                            "sceneId": "floor1left"
+                        },
+                        {
+                            "pitch": -3.398904578,
+                            "yaw": -52.05495286,
+                            "type": "scene",
+                            "text": "ทางเข้าอาคาร",
+                            "sceneId": "floor1right"
+                        },
+                        {
+                            "pitch": 10.023834593,
+                            "yaw": -123.42597363,
+                            "type": "scene",
+                            "text": "ชั้น 2",
+                            "sceneId": "floor2"
+                        },
+                    ]
+                },
+                "rightoutside": {
+                    "title": "ที่นั่งพัก",
+                    "panorama": "images/rightoutside.JPG",
+                    "hotSpots": [
+                        {
+                            "pitch": -12.9528610,
+                            "yaw": 176.5488713,
+                            "type": "scene",
+                            "text": "ทางเข้าอาคาร",
+                            "sceneId": "chair"
+                        },
+                    ]
+                },
+                "inner2floor": {
+                    "title": "ชั้น2",
+                    "panorama": "images/inner2floor.JPG",
+                    "hotSpots": [
+                        {
+                            "pitch": -32.27164977,
+                            "yaw": -167.329939,
+                            "type": "scene",
+                            "text": "ทางเข้าอาคาร",
+                            "sceneId": "start"
+                        },
+                        {
+                            "pitch": -6.31418433,
+                            "yaw": -111.2689691,
+                            "type": "scene",
+                            "text": "ทางเข้าอาคาร",
+                            "sceneId": "infloor2"
+                        },
+                    ]
+                },
+                "rightside": {
+                    "title": "ชั้น2",
+                    "panorama": "images/rightside.JPG", 
+                    "hotSpots": [
+                        {
+                            "pitch": -3.672886137,
+                            "yaw": -146.051485,
+                            "type": "scene",
+                            "text": "เข้าอาคาร",
+                            "sceneId": "floor1right"
+                        },
+                        {
+                            "pitch": -12.80485722,
+                            "yaw": -175.0029504,
+                            "type": "scene",
+                            "text": "หน้าอาคาร",
+                            "sceneId": "start"
+                        },
+                    ]
+                },
+
+            }
+
+
+        });
+
+        // --- ส่วนที่ 2: โค้ดสำหรับหาพิกัดเมื่อคลิก (ยังคงมีประโยชน์สำหรับเพิ่มจุดใหม่) ---
+        viewer.on('mousedown', function (event) {
+            var coords = viewer.mouseEventToCoords(event);
+            console.log('Pitch:', coords[0], 'Yaw:', coords[1]);
+        });
+    </script>
+
+</body>
+
+</html>
